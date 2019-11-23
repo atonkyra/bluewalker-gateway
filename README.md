@@ -4,7 +4,7 @@ Simple python gateway to access bluewalker data for multiple processes. Get blue
 
 ## Installing
 
-The provided systemd unit files assume that bluewalker is installed to `/usr/local/sbin/bluewalker` and these scripts are in /opt/bluewalker-gateway folder.
+The provided systemd unit files assume that bluewalker is installed to `/usr/local/sbin/bluewalker` and these scripts are in `/opt/bluewalker-gateway` folder.
 
 ### Create virtualenv
 ```
@@ -27,4 +27,6 @@ If this works, everything is ok. If output is not seen, try checking `systemctl 
 
 ```
 /opt/bluewalker-gateway/env/bin/python allevents.py
+{"data": ... }
+{"data": ... }
 ```
