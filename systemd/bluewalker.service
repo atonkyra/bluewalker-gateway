@@ -1,0 +1,17 @@
+[Unit]
+Description=bluewalker
+After=syslog.target
+After=network.target
+After=bluewalker-gateway.service
+Requires=bluewalker-gateway.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/usr/local/sbin/bluewalker -device hci0 -duration -1 -observer -json -unix /var/run/bluewalker-gateway/bluewalker.sock
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

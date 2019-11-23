@@ -1,0 +1,18 @@
+[Unit]
+Description=bluewalker-gateway
+After=syslog.target
+After=network.target
+Before=bluewalker.service
+
+[Service]
+Type=simple
+User=nobody
+Group=nogroup
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/bluewalker-gateway/env/bin/python /opt/bluewalker-gateway/relay.py
+RuntimeDirectory=bluewalker-gateway
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
