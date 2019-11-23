@@ -26,7 +26,11 @@ The provided systemd unit files assume that bluewalker is installed to `/usr/loc
 If this works, everything is ok. If output is not seen, try checking `systemctl status bluewalker-gateway` and `systemctl status bluewalker`
 
 ```
-/opt/bluewalker-gateway/env/bin/python allevents.py
+/opt/bluewalker-gateway/env/bin/python /opt/bluewalker-gateway/allevents.py
 {"data": ... }
 {"data": ... }
 ```
+
+## Use the data :)
+
+After installation is complete, you can use bluewalker data with multiple consumers. `allevents.py` should be sufficient example to read the data.
